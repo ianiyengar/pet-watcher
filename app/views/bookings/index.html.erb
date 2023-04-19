@@ -1,0 +1,15 @@
+<div>
+  <%= link_to root_url do %>
+    Book a Sitting
+  <% end %>
+  <h1> All Bookings </h1>
+  <% @bookings.each do |booking| %>
+    <%= booking.first_name %>
+    <%= booking.last_name %>
+    <%= booking.animal_name %>
+    <%= booking.animal_type %>
+    <%= booking.hours_requested %>
+    <%= booking.date %>
+    <%= booking.total_charge %>
+  <% end %>
+</div>

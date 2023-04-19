@@ -1,0 +1,20 @@
+<div>
+<%= link_to bookings_url do %>
+ Admin Page
+<% end %>
+<%= form_with model: @booking do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :animal_name %>
+  <%= f.text_field :animal_name %>
+  <%= f.label :animal_type %>
+  <%= f.select :animal_type, ["Dog", "Cat"] %>
+  <%= f.label :hours_requested %>
+  <%= f.number_field :hours_requested, in: 2..8 %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <%= f.submit %>
+<% end %>
+</div>
