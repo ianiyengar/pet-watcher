@@ -28,19 +28,5 @@ Clone this repo, in terminal cd into the pet-watcher folder, and run ```rails s`
 http://localhost:3000/ should display the homepage for bookings. The button in the top left directs to the admin page where the site administrator could see a list of all bookings and prices.
 
 ## RSpec 
-Add rspec-rails to the :development group of the app’s Gemfile:
-```
-group :development, :test do
-  gem 'rspec-rails', '~> 6.0.0'
-end
-```
-Then, in the project directory:
-```
-bundle install
-```
-And then run:
-```
-rails generate rspec:install
-```
 
 To run both pricing tests for the booking model run ``` bundle exec rspec ``` 
