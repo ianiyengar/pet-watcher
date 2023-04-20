@@ -24,6 +24,7 @@ pg_isready
 
 ## Set up
 Clone this repo, in terminal cd into the pet-watcher folder, and run ```rails s```
+
 http://localhost:3000/ should display the homepage for bookings. The button in the top left directs to the admin page where the site administrator could see a list of all bookings and prices.
 
 ## RSpec 
