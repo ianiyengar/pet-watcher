@@ -1,15 +1,50 @@
 <div>
   <%= link_to root_url do %>
-    Book a Sitting
+    <button type="button" class="btn btn-primary btn-sm">Book a Sitting</button> 
   <% end %>
+  <div class="modal-header">
   <h1> All Bookings </h1>
-  <% @bookings.each do |booking| %>
-    <%= booking.first_name %>
-    <%= booking.last_name %>
-    <%= booking.animal_name %>
-    <%= booking.animal_type %>
-    <%= booking.hours_requested %>
-    <%= booking.date %>
-    <%= booking.total_charge %>
-  <% end %>
+  </div>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Pet Name</th>
+      <th scope="col">Animal Type</th>
+      <th scope="col">Hours Requested</th>
+      <th scope="col">Date</th>
+      <th scope="col">Total Charge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+    <tr>
+      <td><%= booking.first_name %></td>
+      <td><%= booking.last_name %></td>
+      <td><%= booking.animal_name %></td>
+      <td><%= booking.animal_type %></td>
+      <td><%= booking.hours_requested %></td>
+      <td><%= booking.date %></td>
+      <td><%= booking.total_charge %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
 </div>
+<style>
+.btn-primary {
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.modal-header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 15px 15px 15px 30px;
+}
+</style>
